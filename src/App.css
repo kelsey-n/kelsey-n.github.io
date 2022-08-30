@@ -19,11 +19,11 @@
 }
 
 .bulb-off {
-  background-color: blue;
+  background-image: url("broken-heart-broken-heart-svgrepo-com.svg");
 }
 
 .bulb-on {
-  background-color: green;
+  background-image: url("heart-svgrepo-com.svg");
 }
 
 button {

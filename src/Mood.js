@@ -10,7 +10,7 @@ function Bulbs() {
   return (
     <>
       <div className={on ? "bulb-on" : "bulb-off"} />
-      <button onClick={lightSwitch}>On/off</button>
+      <button onClick={lightSwitch}>Happy/Sad</button>
     </>
   );
 }
