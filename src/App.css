@@ -1,32 +1,3 @@
 .App {
   font-family: sans-serif;
-  max-width: 500px;
-  margin-left: 100px;
-}
-
-.mood-sad,
-.mood-happy {
-  width: 100px;
-  height: 100px;
-  background-repeat: no-repeat;
-  background-size: 100px;
-  display: inline-block;
-}
-
-.mood-sad:last-of-type,
-.mood-happy:last-of-type {
-  margin-right: 100%;
-}
-
-.mood-sad {
-  background-image: url("broken-heart-broken-heart-svgrepo-com.svg");
-}
-
-.mood-happy {
-  background-image: url("heart-svgrepo-com.svg");
-}
-
-button {
-  margin-top: 20px;
-  margin-left: 10px;
 }

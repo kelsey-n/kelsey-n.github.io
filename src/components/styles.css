@@ -1,0 +1,16 @@
+.mood-sad,
+.mood-happy {
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  /* background-size: 100px; */
+  /* display: inline-block; */
+}
+
+.mood-sad {
+  background-image: url("../images/broken-heart-broken-heart-svgrepo-com.svg");
+}
+
+.mood-happy {
+  background-image: url("../images/heart-svgrepo-com.svg");
+}

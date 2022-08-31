@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Button } from "@chakra-ui/react";
+import { VStack, Box, Button } from "@chakra-ui/react";
 
-import "./App.css";
+import "./styles.css";
 
 const buttonColor = "pink";
 
@@ -11,12 +11,12 @@ function Heart() {
   const moodSwitch = () => setMood((mood) => !mood);
 
   return (
-    <>
-      <div className={mood ? "mood-happy" : "mood-sad"} />
-      <Button onClick={moodSwitch} colorScheme={buttonColor} size={"sm"}>
+    <VStack>
+      <Box className={mood ? "mood-happy" : "mood-sad"} />
+      <Button onClick={moodSwitch} colorScheme={buttonColor} size={"sm"} mt={7}>
         Toggle Mood
       </Button>
-    </>
+    </VStack>
   );
 }
 
