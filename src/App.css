@@ -4,8 +4,8 @@
   margin-left: 100px;
 }
 
-.bulb-off,
-.bulb-on {
+.mood-sad,
+.mood-happy {
   width: 100px;
   height: 100px;
   background-repeat: no-repeat;
@@ -13,16 +13,16 @@
   display: inline-block;
 }
 
-.bulb-off:last-of-type,
-.bulb-on:last-of-type {
+.mood-sad:last-of-type,
+.mood-happy:last-of-type {
   margin-right: 100%;
 }
 
-.bulb-off {
+.mood-sad {
   background-image: url("broken-heart-broken-heart-svgrepo-com.svg");
 }
 
-.bulb-on {
+.mood-happy {
   background-image: url("heart-svgrepo-com.svg");
 }
 
