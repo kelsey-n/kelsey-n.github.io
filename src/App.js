@@ -15,6 +15,7 @@ import { useState } from "react";
 import Heart from "./components/Mood";
 import Moods from "./components/Moods";
 import MoodTutorial from "./components/MoodTutorial";
+import MoodsTutorial from "./components/MoodsTutorial";
 
 function App() {
   // Set state of checkbox
@@ -39,9 +40,7 @@ function App() {
           </TabList>
           <TabPanels>
             <TabPanel>{!checked ? <Heart /> : <MoodTutorial />}</TabPanel>
-            <TabPanel>
-              <Moods />
-            </TabPanel>
+            <TabPanel>{!checked ? <Moods /> : <MoodsTutorial />}</TabPanel>
           </TabPanels>
         </Tabs>
       </VStack>

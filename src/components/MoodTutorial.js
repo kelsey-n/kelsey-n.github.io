@@ -7,6 +7,7 @@ import {
   HStack,
   Tooltip,
   Highlight,
+  Divider,
 } from "@chakra-ui/react";
 
 import "./styles.css";
@@ -30,7 +31,7 @@ const introText = (
         <b>state</b>
       </u>
     </Tooltip>{" "}
-    of a rendered component. Hover to find out how!
+    of a rendered component. Hover on the numbered steps to find out how!
   </Text>
 );
 const label1 = (
@@ -45,8 +46,7 @@ const label2 = (
     <em>Update</em> the state - Each time we click the button, we set the new
     state value (or mood) to be the opposite of the current one:
     <br />
-    <kbd>setState(state ={">"} !state)</kbd> <br />{" "}
-    <em>Click the button now!</em>
+    <kbd>setState(state ={">"} !state)</kbd> <br /> <em>Click the button!</em>
   </Text>
 );
 const label3 = (
@@ -64,14 +64,14 @@ const label4Sad = (
   <Text>
     The new class changes the background image to match the state determined by
     useState. <br />
-    Essentially: state=false, class/style=sad, heart=broken :(
+    Essentially: state=false &#x2192; class/style=sad &#x2192; heart=broken :(
   </Text>
 );
 const label4Happy = (
   <Text>
     The new class changes the background image to match the state determined by
     useState. <br />
-    Essentially: state=true, class/style=happy, heart=whole :)
+    Essentially: state=true &#x2192; class/style=happy &#x2192; heart=whole :)
   </Text>
 );
 
@@ -85,8 +85,9 @@ function HeartTutorial() {
   };
 
   return (
-    <VStack>
+    <VStack height={250}>
       {introText}
+      <Divider orientation="vertical" />
       <HStack>
         <Tooltip
           label={label1}

@@ -1,20 +1,13 @@
 import { useState } from "react";
 import {
   VStack,
-  Box,
   Button,
-  Text,
   Heading,
-  Tooltip,
   Popover,
   PopoverTrigger,
   PopoverContent,
-  PopoverHeader,
   PopoverBody,
-  PopoverFooter,
   PopoverArrow,
-  PopoverCloseButton,
-  PopoverAnchor,
 } from "@chakra-ui/react";
 
 import "./styles.css";
