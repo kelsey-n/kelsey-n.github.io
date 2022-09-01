@@ -26,6 +26,8 @@ const moodTooltipContent = {
 
 const tooltipBackground = "cyan.100";
 const tooltipFont = "black";
+const disclaimer =
+  "These suggestions do not consist of actual professional advice, they are simply for learning purposes :)";
 
 const introText = (
   <Text>
@@ -73,7 +75,17 @@ function MoodsTutorial() {
     <VStack height={260}>
       {introText}
       <Divider orientation="vertical" />
-      <Heading size={"md"}>What can I do when I'm feeling:</Heading>
+      <Heading size={"md"}>
+        <Tooltip
+          label={disclaimer}
+          bg={tooltipBackground}
+          color={tooltipFont}
+          placement="top"
+        >
+          <u>What can I do</u>
+        </Tooltip>{" "}
+        when I'm feeling:
+      </Heading>
       <HStack width={100}>
         <VStack>
           <Tooltip

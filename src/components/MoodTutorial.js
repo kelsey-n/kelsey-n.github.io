@@ -6,7 +6,6 @@ import {
   Text,
   HStack,
   Tooltip,
-  Highlight,
   Divider,
 } from "@chakra-ui/react";
 

@@ -8,11 +8,11 @@ import {
   PopoverContent,
   PopoverBody,
   PopoverArrow,
+  Tooltip,
 } from "@chakra-ui/react";
 
 import "./styles.css";
 
-const buttonColor = "pink";
 const moodOptions = ["Happy", "Sad", "Angry", "Anxious"];
 const moodTooltipContent = {
   Happy: "Spread the joy! Bring someone else up.",
@@ -21,15 +21,27 @@ const moodTooltipContent = {
   Anxious: "Take a deep breath; take care of yourself",
 };
 
-function Moods() {
-  //   const [mood, setMood] = useState(null);
+const tooltipBackground = "cyan.100";
+const tooltipFont = "black";
+const disclaimer =
+  "These suggestions do not consist of actual professional advice, they are simply for learning purposes :)";
 
-  //   const moodSwitch = () => setMood((mood) => !mood);
+function Moods() {
   const [activeMood, setActiveMood] = useState(null);
 
   return (
     <VStack>
-      <Heading size={"md"}>What can I do when I'm feeling:</Heading>
+      <Heading size={"md"}>
+        <Tooltip
+          label={disclaimer}
+          bg={tooltipBackground}
+          color={tooltipFont}
+          placement="top"
+        >
+          <u>What can I do</u>
+        </Tooltip>{" "}
+        when I'm feeling:
+      </Heading>
       {moodOptions.map((mood) => {
         return (
           <Popover placement="right">
