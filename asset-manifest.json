@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-practice/static/css/main.5272353d.css",
-    "main.js": "/react-practice/static/js/main.e68bfb33.js",
+    "main.js": "/react-practice/static/js/main.b0859ccb.js",
     "static/media/broken-heart-broken-heart-svgrepo-com.svg": "/react-practice/static/media/broken-heart-broken-heart-svgrepo-com.de55c29614d1ab878990.svg",
     "static/media/heart-svgrepo-com.svg": "/react-practice/static/media/heart-svgrepo-com.de70e8ece0ebf909b3f1.svg",
     "index.html": "/react-practice/index.html",
     "main.5272353d.css.map": "/react-practice/static/css/main.5272353d.css.map",
-    "main.e68bfb33.js.map": "/react-practice/static/js/main.e68bfb33.js.map"
+    "main.b0859ccb.js.map": "/react-practice/static/js/main.b0859ccb.js.map"
   },
   "entrypoints": [
     "static/css/main.5272353d.css",
-    "static/js/main.e68bfb33.js"
+    "static/js/main.b0859ccb.js"
   ]
 }
