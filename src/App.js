@@ -2,7 +2,7 @@ import {
   ChakraProvider,
   Heading,
   VStack,
-  Box,
+  Checkbox,
   Highlight,
   Tabs,
   TabList,
@@ -10,11 +10,16 @@ import {
   Tab,
   TabPanel,
 } from "@chakra-ui/react";
+import { useState } from "react";
 
 import Heart from "./components/Mood";
 import Moods from "./components/Moods";
+import MoodTutorial from "./components/MoodTutorial";
 
 function App() {
+  // Set state of checkbox
+  const [checked, setChecked] = useState(false);
+
   return (
     <ChakraProvider>
       <VStack spacing="30px">
@@ -26,15 +31,14 @@ function App() {
             Using useState to explore emotional state
           </Highlight>
         </Heading>
-        <Tabs align="center" variant="line" colorScheme={"cyan"}>
+        <Checkbox onChange={() => setChecked(!checked)}>Show tutorial</Checkbox>
+        <Tabs align="center" variant="line" colorScheme={"cyan"} width={500}>
           <TabList>
             <Tab>Simple</Tab>
             <Tab>In Data Viz</Tab>
           </TabList>
           <TabPanels>
-            <TabPanel>
-              <Heart />
-            </TabPanel>
+            <TabPanel>{!checked ? <Heart /> : <MoodTutorial />}</TabPanel>
             <TabPanel>
               <Moods />
             </TabPanel>

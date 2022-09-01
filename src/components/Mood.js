@@ -6,7 +6,7 @@ import "./styles.css";
 const buttonColor = "pink";
 
 function Heart() {
-  const [mood, setMood] = useState(false);
+  const [mood, setMood] = useState(true);
 
   const moodSwitch = () => setMood((mood) => !mood);
 
