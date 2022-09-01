@@ -20,17 +20,12 @@ const introText = (
   <Text>
     useState is a React hook that allows us control the{" "}
     <Tooltip
+      hasArrow
       label={stateLabel}
       bg={tooltipBackground}
       color={tooltipFont}
       placement="top"
     >
-      {/* <Highlight
-        query="state"
-        styles={{ px: "2", py: "1", rounded: "full", bg: "teal.100" }}
-      >
-        state
-      </Highlight> */}
       <u>
         <b>state</b>
       </u>
@@ -48,8 +43,10 @@ const label1 = (
 const label2 = (
   <Text>
     <em>Update</em> the state - Each time we click the button, we set the new
-    state value (or mood) to be the opposite of the current one:{" "}
-    <kbd>setState(state ={">"} !state)</kbd>
+    state value (or mood) to be the opposite of the current one:
+    <br />
+    <kbd>setState(state ={">"} !state)</kbd> <br />{" "}
+    <em>Click the button now!</em>
   </Text>
 );
 const label3 = (
@@ -57,16 +54,24 @@ const label3 = (
     <em>Read</em> the state - after clicking the button, we see if the value of{" "}
     <kbd>state</kbd> is <kbd>true</kbd> or <kbd>false</kbd> and set the class
     styles accordingly:
-    {"\n"}
+    <br />
     <kbd>
       className= {"{"}state ? "state-happy":"state-sad"{"}"}
     </kbd>
   </Text>
 );
-const label4 = (
+const label4Sad = (
   <Text>
-    Changing the class then changes the background image of our component to
-    match the mood/state determined by useState
+    The new class changes the background image to match the state determined by
+    useState. <br />
+    Essentially: state=false, class/style=sad, heart=broken :(
+  </Text>
+);
+const label4Happy = (
+  <Text>
+    The new class changes the background image to match the state determined by
+    useState. <br />
+    Essentially: state=true, class/style=happy, heart=whole :)
   </Text>
 );
 
@@ -94,7 +99,7 @@ function HeartTutorial() {
         <Box className={mood ? "mood-happy" : "mood-sad"} />
         {clicked ? (
           <Tooltip
-            label={label4}
+            label={!mood ? label4Sad : label4Happy}
             bg={tooltipBackground}
             color={tooltipFont}
             placement="right"

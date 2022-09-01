@@ -28,7 +28,7 @@ function App() {
             query="usestate"
             styles={{ px: "2", py: "1", rounded: "full", bg: "pink.100" }}
           >
-            Using useState to explore emotional state
+            emotionalState using useState
           </Highlight>
         </Heading>
         <Checkbox onChange={() => setChecked(!checked)}>Show tutorial</Checkbox>
